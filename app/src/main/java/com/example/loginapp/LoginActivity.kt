@@ -22,10 +22,6 @@ class LoginActivity : Activity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-
-
-
-
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
@@ -35,13 +31,7 @@ class LoginActivity : Activity() {
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-
-
         }
-
-
-
-
 
 
         val register = findViewById<Button>(R.id.rgbtn)
@@ -51,8 +41,6 @@ class LoginActivity : Activity() {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
-
-
 
 
         val login = findViewById<Button>(R.id.loginbtn)
@@ -69,10 +57,7 @@ class LoginActivity : Activity() {
                 Toast.makeText(baseContext, "Please fill all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
 
-
             }
-
-
 
             auth.signInWithEmailAndPassword(email1, password)
                 .addOnCompleteListener(this) { task ->
@@ -94,9 +79,6 @@ class LoginActivity : Activity() {
                     Toast.makeText(baseContext, "Authentication failed. ${it.localizedMessage}",
                         Toast.LENGTH_SHORT).show()
                 }
-
         }
-
-
     }
 }

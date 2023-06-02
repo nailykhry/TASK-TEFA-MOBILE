@@ -19,11 +19,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         auth = Firebase.auth
-
-
-
 
         val logout = findViewById<Button>(R.id.logout)
 
@@ -40,11 +36,6 @@ class MainActivity : Activity() {
         }
 
 
-
-
-
-
-
         val user = auth.currentUser
         if (user != null) {
             val db = FirebaseFirestore.getInstance()
@@ -58,9 +49,6 @@ class MainActivity : Activity() {
 
                         val userInfoTextView = findViewById<TextView>(R.id.name21)
                         userInfoTextView.text = "Welcome $name\n \n Your Phone Number Is: $phone"
-
-
-
                     }
                 }
                 .addOnFailureListener { exception ->

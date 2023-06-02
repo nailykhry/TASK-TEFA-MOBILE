@@ -25,6 +25,28 @@
 
     </TextView>
 
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="146dp"
+        android:layout_height="118dp"
+        android:layout_margin="40dp"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name21"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/detail"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/logout"
@@ -32,9 +54,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="284dp"
         android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail"
+        app:layout_constraintEnd_toEndOf="parent">
 
     </Button>
 
